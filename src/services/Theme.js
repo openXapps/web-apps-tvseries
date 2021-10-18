@@ -10,7 +10,7 @@ export const themes = {
     palette: {
       mode: 'dark',
       primary: deepOrange,
-      divider: deepOrange[900],
+      // divider: deepOrange[900],
       // background: {
       //   default: deepOrange[900],
       //   paper: deepOrange[900],
