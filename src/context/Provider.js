@@ -2,7 +2,7 @@ import { createContext, useReducer } from 'react';
 import Reducer from './Reducer';
 
 const data = {
-  theme: 'dark',
+  theme: 'light',
 };
 
 export const context = createContext(data);

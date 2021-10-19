@@ -13,6 +13,7 @@ import { themes } from './services/Theme';
 // Components
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
+import Settings from './components/Settings/Settings';
 import Error404 from './components/Error/Error404';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Toolbar />
         <Switch>
           <Route path="/" exact component={Home} />
+          <Route path="/settings" exact component={Settings} />
           <Route component={Error404} />
         </Switch>
       </BrowserRouter>

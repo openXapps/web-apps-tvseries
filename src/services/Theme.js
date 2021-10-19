@@ -1,4 +1,4 @@
-import deepOrange from '@mui/material/colors/deepOrange';
+// import deepOrange from '@mui/material/colors/deepOrange';
 
 export const themes = {
   light: {
@@ -9,7 +9,7 @@ export const themes = {
   dark: {
     palette: {
       mode: 'dark',
-      primary: deepOrange,
+      // primary: deepOrange,
       // divider: deepOrange[900],
       // background: {
       //   default: deepOrange[900],
