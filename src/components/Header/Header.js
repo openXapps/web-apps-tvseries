@@ -19,17 +19,17 @@ const Header = ({ history, location }) => {
   return (
     <Box display="flex">
       <AppBar position="fixed">
-        <Container maxWidth="md">
+        <Container maxWidth="md" disableGutters>
           <Toolbar disableGutters>
             <IconButton
-              // edge="start"
               aria-label="home"
               sx={{ mr: 1 }}
               onClick={handleHomeButton}
-            >{history.location.pathname === '/' ? <HomeIcon /> : <ArrowBackIcon />}</IconButton>
+            >{location.pathname === '/' ? <HomeIcon /> : <ArrowBackIcon />}</IconButton>
             <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}
             >TV Series</Typography>
             <IconButton
+              disabled={location.pathname !== '/'}
               onClick={() => history.push('/settings')}
             ><SettingsIcon /></IconButton>
           </Toolbar>
