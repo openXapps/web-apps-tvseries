@@ -1,5 +1,6 @@
-// import deepOrange from '@mui/material/colors/deepOrange';
 import grey from '@mui/material/colors/grey';
+
+import { getLocalStorage, storageObjects, defaultStorage } from '../services/Storage';
 
 export const themeList = [
   { themeId: 'light', themeAlias: 'Light' },
@@ -14,7 +15,6 @@ export const themes = {
     palette: {
       mode: 'light',
       background: {
-        // default: deepOrange[900],
         paper: grey[100],
       },
     },
@@ -22,12 +22,17 @@ export const themes = {
   dark: {
     palette: {
       mode: 'dark',
-      // primary: deepOrange,
-      // divider: deepOrange[900],
       background: {
-        // default: deepOrange[900],
         paper: grey[800],
       },
     },
   },
-}
+};
+
+/**
+ * 
+ */
+export const getTheme = () => {
+  const settings = getLocalStorage('settings');
+  let currentTheme = defaultStorage.settings.theme;
+};

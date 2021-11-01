@@ -1,8 +1,13 @@
 import { createContext, useReducer } from 'react';
 import Reducer from './Reducer';
+import { initialUse, getLocalStorage } from '../services/Storage';
 
+// App initial use
+initialUse();
+
+// Context initial data
 const data = {
-  theme: 'light',
+  theme: getLocalStorage('settings').data.theme,
 };
 
 export const context = createContext(data);
