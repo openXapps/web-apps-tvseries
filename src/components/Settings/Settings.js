@@ -50,7 +50,7 @@ const Settings = ({ history }) => {
             >
               {themeList.map((v, i) => {
                 return (
-                  <MenuItem key={i} value={v.themeId}>{v.themeAlias}</MenuItem>
+                  <MenuItem key={i} value={v.themeId} disabled={v.themeId === state.theme}>{v.themeAlias}</MenuItem>
                 );
               })}
             </Select>

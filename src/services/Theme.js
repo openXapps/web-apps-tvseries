@@ -1,7 +1,5 @@
 import grey from '@mui/material/colors/grey';
 
-import { getLocalStorage, storageObjects, defaultStorage } from '../services/Storage';
-
 export const themeList = [
   { themeId: 'light', themeAlias: 'Light' },
   { themeId: 'dark', themeAlias: 'Dark' },
@@ -27,12 +25,4 @@ export const themes = {
       },
     },
   },
-};
-
-/**
- * 
- */
-export const getTheme = () => {
-  const settings = getLocalStorage('settings');
-  let currentTheme = defaultStorage.settings.theme;
 };

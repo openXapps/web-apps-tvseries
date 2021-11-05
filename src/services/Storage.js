@@ -13,8 +13,11 @@
   // gd-tv-settings
   settings: {
     appVersion: '1.0',
-    theme: 'auto',
-  }
+    theme: 'dark',
+  },
+  favourites: [
+
+  ],
 };
 
 /**
@@ -62,7 +65,9 @@ export const getLocalStorage = (item) => {
  */
 export const initialUse = () => {
   const settings = getLocalStorage('settings');
+  const favourites = getLocalStorage('favourites');
 
   // On first use
   if (!settings.statusOK) saveLocalStorage(storageObjects.settings, defaultStorage.settings);
+  if (!favourites.statusOK) saveLocalStorage(storageObjects.favourites, defaultStorage.favourites);
 };
